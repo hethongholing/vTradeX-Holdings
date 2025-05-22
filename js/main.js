@@ -90,7 +90,6 @@
     
     
    // Back to top button
-<script>
   const btn = document.querySelector('.back-to-top');
 
   window.addEventListener('scroll', () => {
@@ -101,7 +100,6 @@
     e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-</script>
 
 
 
