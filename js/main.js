@@ -90,16 +90,19 @@
     
     
    // Back to top button
-    const backToTop = $('.back-to-top');
+<script>
+  const btn = document.querySelector('.back-to-top');
 
-  $(window).on('scroll', () => {
-    backToTop.toggle($(window).scrollTop() > 300);
+  window.addEventListener('scroll', () => {
+    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
   });
 
-  backToTop.on('click', (e) => {
+  btn.addEventListener('click', e => {
     e.preventDefault();
-    $('html, body').animate({ scrollTop: 0 }, 500);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+</script>
+
 
 
     // Roadmap carousel
